@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/5913f4cd-a1d4-4428-aee4-46babac59eb7/resourceGroups/portfolio-fnc/providers/Microsoft.Web/sites/botonerapp",
+    "appService.deploySubpath": "."
+}
