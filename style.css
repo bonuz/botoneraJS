@@ -1,7 +1,14 @@
+body {
+    background-image: url("background.jpg");
+    background-color: #cccccc;
+   }
+
 .keys {
-    min-height: 100vh;
+    /*min-height: 100vh;*/
+    min-height: 17vh;
     align-items: center;
     justify-content: center;
+    display: inline-flex;
 }
 
 .key {
