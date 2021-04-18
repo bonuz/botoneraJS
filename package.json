@@ -3,9 +3,6 @@
     "version": "0.0.1",
     "description": "Botonera del Karaoke de Roger",
     "main": "index.html",
-    "scripts": {
-      "test": "echo \"Error: no test specified\" && exit 1"
-    },
     "author": "FNC",
     "license": "ISC",
     "dependencies": {
