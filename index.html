@@ -46,9 +46,9 @@
         </div>
 
         <div class="keys">
-            <div data-key="65" class="key">
-                <kbd>A</kbd>
-                <span class="sound">clap</span>
+            <div data-key="90" class="key">
+                <kbd>Z</kbd>
+                <span class="sound">temaiken</span>
             </div>
             <div data-key="83" class="key">
                 <kbd>S</kbd>
@@ -94,10 +94,30 @@
         <audio data-key="75" src="sounds/drums/tom.wav"></audio>
         <audio data-key="76" src="sounds/drums/crash.wav"></audio>
 
+        <audio data-key="90" src="sounds/karaoke/temaiken.wav"></audio>
+
         <script>
             function playSound(e){
                 const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
                 const key = document.querySelector(`.key[data-key="${e.keyCode}"]`);
+                if(!audio) return; // stop the function from running all together
+                audio.currentTime = 0;
+                audio.play();
+                key.classList.add('playing');
+            }
+
+            function playSound2(e){
+                if (e.target.localName !== 'span' && e.target.localName !== 'div' && e.target.localName !== 'kbd') return; // stop the function if the target is not our div
+
+                let datatasetKey;
+                if (!e.target.dataset.key && e.target.parentElement.className == 'key') {
+                    datatasetKey = e.target.parentElement.dataset.key;
+                } else {
+                    datatasetKey = e.target.dataset.key;
+                }
+
+                const audio = document.querySelector(`audio[data-key="${datatasetKey}"]`);
+                const key = document.querySelector(`.key[data-key="${datatasetKey}"]`);
                 if(!audio) return; // stop the function from running all together
                 audio.currentTime = 0;
                 audio.play();
@@ -113,6 +133,7 @@
             keys.forEach(key => key.addEventListener('transitionend', removeTransition));
 
             window.addEventListener('keydown', playSound);
+            window.addEventListener('click', playSound2);
         </script>
     </body>
 </html>

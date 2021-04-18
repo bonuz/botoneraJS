@@ -5,6 +5,8 @@ info
 press a key to get key number:
 keycode.info
 
+wav compress: https://www.freeconvert.com/wav-compressor
+
 samples
 ----------
 https://99sounds.org/drum-samples/
