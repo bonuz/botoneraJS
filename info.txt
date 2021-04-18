@@ -1,0 +1,11 @@
+info
+-----
+
+
+press a key to get key number:
+keycode.info
+
+samples
+----------
+https://99sounds.org/drum-samples/
+https://www.musicradar.com/news/drums/1000-free-drum-samples
